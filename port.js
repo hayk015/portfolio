@@ -20,12 +20,6 @@
           if (themeToggleMobile) {
             themeToggleMobile.textContent = icon + (isDark ? " Light Mode" : " Dark Mode");
           }
-          if (vantaEffect && typeof vantaEffect.setOptions === "function") {
-            vantaEffect.setOptions({
-              color: isDark ? 0x2d6de8 : 0x2563eb,
-              backgroundColor: isDark ? 0x0c1e4a : 0xf0f5ff,
-            });
-          }
         }
 
         function setTheme(theme) {
@@ -41,7 +35,6 @@
         updateThemeUI(currentTheme);
 
         if (typeof VANTA !== "undefined" && !reducedMotion) {
-          const isDark = currentTheme === "dark";
           vantaEffect = VANTA.NET({
             el: "#vanta-hero",
             THREE,
@@ -50,8 +43,8 @@
             gyroControls: false,
             minHeight: 200,
             minWidth: 200,
-            color: isDark ? 0x2d6de8 : 0x2563eb,
-            backgroundColor: isDark ? 0x0c1e4a : 0xf0f5ff,
+            color: 0x2d6de8,
+            backgroundColor: 0x0c1e4a,
             points: 10,
             maxDistance: 22,
             spacing: 18,

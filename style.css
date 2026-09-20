@@ -119,36 +119,37 @@
   /* Gradients */
   --g-brand:   linear-gradient(135deg, var(--blue-600), var(--blue-500));
   --g-brand-r: linear-gradient(135deg, var(--blue-500), var(--blue-700));
-  --g-hero:    linear-gradient(160deg, #FFFFFF 0%, #F0F5FF 45%, #E0EDFF 100%);
+  --g-hero:    linear-gradient(160deg, #0F172A 0%, #172554 45%, #1E3A8A 100%);
   --g-section: linear-gradient(180deg, #F0F5FF 0%, #FFFFFF 100%);
 
-  /* ── Hero & Nav Theme Tokens (Default: Light Theme) ── */
-  --hero-bg:          linear-gradient(160deg, #FFFFFF 0%, #F0F5FF 45%, #E0EDFF 100%);
-  --hero-overlay:     radial-gradient(ellipse 65% 75% at 20% 40%, rgba(37,99,235,0.07) 0%, transparent 65%),
-                      radial-gradient(ellipse 50% 50% at 80% 20%, rgba(96,165,250,0.10) 0%, transparent 60%);
-  --hero-title-color: var(--slate-900);
-  --hero-grad-text:   linear-gradient(90deg, #1E40AF, #2563EB, #0284C7, #1E40AF);
-  --hero-role-color:  var(--slate-600);
-  --hero-desc-color:  var(--slate-700);
-  --hero-eyebrow-bg:  rgba(37,99,235,0.08);
-  --hero-eyebrow-bdr: rgba(37,99,235,0.20);
-  --hero-eyebrow-text:var(--blue-700);
-  --hero-card-bg:     rgba(255,255,255,0.90);
-  --hero-card-bdr:    rgba(37,99,235,0.16);
-  --hero-card-sh:     0 4px 20px rgba(37,99,235,0.08);
-  --hero-stat-num:    var(--slate-900);
-  --hero-stat-lbl:    var(--slate-500);
-  --hero-btn-prim-bg: var(--blue-600);
-  --hero-btn-prim-color: #FFFFFF;
-  --hero-btn-prim-sh: 0 4px 16px rgba(37,99,235,0.30);
-  --hero-btn-gh-bg:   rgba(255,255,255,0.85);
-  --hero-btn-gh-color:var(--slate-800);
-  --hero-btn-gh-bdr:  rgba(37,99,235,0.22);
-  --nav-bg-init:      rgba(255,255,255,0.88);
-  --nav-bdr-init:     rgba(37,99,235,0.10);
-  --nav-text-init:    var(--slate-900);
-  --nav-link-init:    var(--slate-700);
-  --nav-ham-span:     var(--slate-900);
+  /* ── Hero Tokens: Signature Deep Sapphire Blue (Always Blue) ── */
+  --hero-bg:          linear-gradient(160deg, #0F172A 0%, #172554 45%, #1E3A8A 100%);
+  --hero-overlay:     radial-gradient(ellipse 55% 65% at 15% 55%, rgba(37,99,235,0.35) 0%, transparent 62%),
+                      radial-gradient(ellipse 40% 45% at 82% 18%, rgba(59,130,246,0.18) 0%, transparent 55%),
+                      radial-gradient(ellipse 30% 30% at 50% 90%, rgba(29,78,216,0.15) 0%, transparent 50%);
+  --hero-title-color: #FFFFFF;
+  --hero-grad-text:   linear-gradient(90deg, #BFDBFE, #93C5FD, #60A5FA, #BFDBFE);
+  --hero-role-color:  rgba(255,255,255,0.44);
+  --hero-desc-color:  rgba(255,255,255,0.68);
+  --hero-eyebrow-bg:  rgba(255,255,255,0.08);
+  --hero-eyebrow-bdr: rgba(255,255,255,0.18);
+  --hero-eyebrow-text:rgba(255,255,255,0.88);
+  --hero-card-bg:     rgba(255,255,255,0.07);
+  --hero-card-bdr:    rgba(255,255,255,0.12);
+  --hero-card-sh:     0 4px 20px rgba(0, 0, 0, 0.25);
+  --hero-stat-num:    #FFFFFF;
+  --hero-stat-lbl:    rgba(255,255,255,0.46);
+  --hero-btn-prim-bg: #FFFFFF;
+  --hero-btn-prim-color: var(--blue-800);
+  --hero-btn-prim-sh: 0 2px 16px rgba(255,255,255,0.20);
+  --hero-btn-gh-bg:   rgba(255,255,255,0.07);
+  --hero-btn-gh-color:rgba(255,255,255,0.88);
+  --hero-btn-gh-bdr:  rgba(255,255,255,0.18);
+  --nav-bg-init:      transparent;
+  --nav-bdr-init:     transparent;
+  --nav-text-init:    #FFFFFF;
+  --nav-link-init:    rgba(255,255,255,0.78);
+  --nav-ham-span:     #FFFFFF;
 
   /* ── Spacing — strict 4px grid ── */
   --sp-1:  4px;
@@ -540,9 +541,14 @@ img { max-width: 100%; height: auto; display: block; }
   transition: width var(--t-base) var(--ease);
 }
 .nav.scrolled .nav-link { color: var(--c-text-3); }
-.nav-link:hover, .nav-link.active {
+.nav.scrolled .nav-link:hover, .nav.scrolled .nav-link.active {
   color: var(--c-brand);
   background: var(--c-brand-sub);
+}
+.nav:not(.scrolled) .nav-link:hover,
+.nav:not(.scrolled) .nav-link.active {
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.10);
 }
 
 /* Theme toggle */
@@ -562,6 +568,16 @@ img { max-width: 100%; height: auto; display: block; }
     background var(--t-micro),
     border-color var(--t-micro),
     transform var(--t-micro);
+}
+.nav:not(.scrolled) .theme-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: #FFFFFF;
+}
+.nav:not(.scrolled) .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
 }
 .theme-toggle:hover {
   background: var(--c-brand-mid);
@@ -618,7 +634,7 @@ img { max-width: 100%; height: auto; display: block; }
   transition: background var(--t-micro);
 }
 @media (min-width: 768px) { .nav-hamburger { display: none; } }
-.nav-hamburger:hover { background: rgba(37,99,235,0.08); }
+.nav-hamburger:hover { background: rgba(255,255,255,0.12); }
 .nav.scrolled .nav-hamburger:hover { background: var(--c-brand-sub); }
 .nav-hamburger span {
   display: block;
@@ -1598,15 +1614,16 @@ img { max-width: 100%; height: auto; display: block; }
 .cta-card {
   border-radius: var(--r-xl);
   padding: var(--sp-7);
-  color: var(--c-text-inv);
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 300px;
   position: relative;
   overflow: hidden;
-  background: var(--g-hero);
-  border: 1px solid rgba(191,219,254,0.14);
+  background: linear-gradient(160deg, #0F172A 0%, #172554 45%, #1E3A8A 100%);
+  border: 1px solid rgba(191,219,254,0.18);
+  box-shadow: var(--sh-lg);
 }
 .cta-card::before {
   content: '';
@@ -1627,12 +1644,13 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: var(--font-display);
   font-size: var(--fs-lg);
   font-weight: 800;
+  color: #FFFFFF;
   margin-bottom: var(--sp-2);
   line-height: var(--lh-snug);
 }
 .cta-desc {
-  font-size: var(--fs-sm);
-  color: rgba(255,255,255,0.70);
+  font-size: var(--fs-base);
+  color: rgba(255,255,255,0.78);
   line-height: var(--lh-loose);
   margin-bottom: var(--sp-5);
 }
@@ -1647,7 +1665,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0 var(--sp-5);
   height: var(--touch);
   border-radius: var(--r-md);
-  background: var(--c-text-inv);
+  background: #FFFFFF;
   color: var(--blue-800);
   width: fit-content;
   box-shadow: 0 4px 16px rgba(255,255,255,0.20);
@@ -1655,7 +1673,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .cta-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(255,255,255,0.28);
+  box-shadow: 0 8px 28px rgba(255,255,255,0.30);
 }
 .cta-btn:active { transform: scale(0.97); }
 
