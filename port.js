@@ -3,9 +3,46 @@
           "(prefers-reduced-motion: reduce)",
         ).matches;
 
-        /* 1. VANTA */
+        /* 1. Theme Management & VANTA */
+        let vantaEffect = null;
+        const themeToggle = document.getElementById("themeToggle");
+        const themeToggleMobile = document.getElementById("themeToggleMobile");
+
+        function updateThemeUI(theme) {
+          const isDark = theme === "dark";
+          const icon = isDark ? "☀️" : "🌙";
+          const label = isDark ? "Switch to light theme" : "Switch to dark theme";
+          if (themeToggle) {
+            themeToggle.textContent = icon;
+            themeToggle.setAttribute("aria-label", label);
+            themeToggle.setAttribute("title", label);
+          }
+          if (themeToggleMobile) {
+            themeToggleMobile.textContent = icon + (isDark ? " Light Mode" : " Dark Mode");
+          }
+          if (vantaEffect && typeof vantaEffect.setOptions === "function") {
+            vantaEffect.setOptions({
+              color: isDark ? 0x2d6de8 : 0x2563eb,
+              backgroundColor: isDark ? 0x0c1e4a : 0xf0f5ff,
+            });
+          }
+        }
+
+        function setTheme(theme) {
+          document.documentElement.setAttribute("data-theme", theme);
+          try {
+            localStorage.setItem("portfolio-theme", theme);
+          } catch (e) {}
+          updateThemeUI(theme);
+        }
+
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme") || "light";
+        updateThemeUI(currentTheme);
+
         if (typeof VANTA !== "undefined" && !reducedMotion) {
-          VANTA.NET({
+          const isDark = currentTheme === "dark";
+          vantaEffect = VANTA.NET({
             el: "#vanta-hero",
             THREE,
             mouseControls: true,
@@ -13,12 +50,22 @@
             gyroControls: false,
             minHeight: 200,
             minWidth: 200,
-            color: 0x2d6de8,
-            backgroundColor: 0x0c1e4a,
+            color: isDark ? 0x2d6de8 : 0x2563eb,
+            backgroundColor: isDark ? 0x0c1e4a : 0xf0f5ff,
             points: 10,
             maxDistance: 22,
             spacing: 18,
           });
+        }
+
+        function toggleTheme() {
+          const active =
+            document.documentElement.getAttribute("data-theme") || "light";
+          setTheme(active === "dark" ? "light" : "dark");
+        }
+
+        if (themeToggle) {
+          themeToggle.addEventListener("click", toggleTheme);
         }
 
         /* 2. Custom cursor */
@@ -67,6 +114,8 @@
         const ham = document.getElementById("navHamburger");
         const drw = document.getElementById("navDrawer");
         const dls = drw.querySelectorAll(".nav-link");
+        const ttd = document.getElementById("themeToggleMobile");
+
         window.addEventListener(
           "scroll",
           () => {
@@ -79,16 +128,24 @@
           drw.classList.add("open");
           ham.setAttribute("aria-expanded", "true");
           dls.forEach((l) => l.setAttribute("tabindex", "0"));
+          if (ttd) ttd.setAttribute("tabindex", "0");
         }
         function close() {
           drw.classList.remove("open");
           ham.setAttribute("aria-expanded", "false");
           dls.forEach((l) => l.setAttribute("tabindex", "-1"));
+          if (ttd) ttd.setAttribute("tabindex", "-1");
         }
         ham.addEventListener("click", () =>
           drw.classList.contains("open") ? close() : open(),
         );
         dls.forEach((l) => l.addEventListener("click", close));
+        if (ttd) {
+          ttd.addEventListener("click", () => {
+            toggleTheme();
+            close();
+          });
+        }
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") close();
         });
