@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hayakreev Raja — M.Sc AI &amp; ML student at CIT Coimbatore. Portfolio of machine learning projects, certifications, and awards."
+    />
+    <title>Hayakreev Raja — AI &amp; ML Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Bricolage+Grotesque:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Custom cursor -->
+    <div class="cursor-outer" id="cursorOuter" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <!-- Floating CTA -->
+    <a
+      class="hire-float"
+      id="hireFloat"
+      href="mailto:hayakreevr.2007@gmail.com"
+      aria-label="Send me an email — Hire Me"
+    >
+      <span class="hf-pulse" aria-hidden="true"></span>Hire Me &#x2192;
+    </a>
+
+    <!-- Header / Nav -->
+    <header role="banner">
+      <nav class="nav" id="nav" aria-label="Primary navigation">
+        <a
+          class="nav-logo"
+          href="#main-content"
+          aria-label="Hayakreev Raja — back to top"
+        >
+          <div class="nav-monogram" aria-hidden="true">HR</div>
+          <span>Hayakreev Raja</span>
+        </a>
+        <div class="nav-links" role="list">
+          <a class="nav-link" href="#about" role="listitem">About</a>
+          <a class="nav-link" href="#projects" role="listitem">Projects</a>
+          <a class="nav-link" href="#skills" role="listitem">Skills</a>
+          <a class="nav-link" href="#certifications" role="listitem">Certs</a>
+          <a class="nav-link" href="#awards" role="listitem">Awards</a>
+          <a class="nav-link" href="#contact" role="listitem">Contact</a>
+        </div>
+        <div class="nav-end">
+          <button
+            class="nav-hamburger"
+            id="navHamburger"
+            aria-expanded="false"
+            aria-controls="navDrawer"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <a class="nav-cta" href="mailto:hayakreevr.2007@gmail.com"
+            >Hire Me &#x2192;</a
+          >
+        </div>
+      </nav>
+      <div
+        class="nav-drawer"
+        id="navDrawer"
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <a class="nav-link" href="#about" tabindex="-1">About</a>
+        <a class="nav-link" href="#projects" tabindex="-1">Projects</a>
+        <a class="nav-link" href="#skills" tabindex="-1">Skills</a>
+        <a class="nav-link" href="#certifications" tabindex="-1"
+          >Certifications</a
+        >
+        <a class="nav-link" href="#awards" tabindex="-1">Awards</a>
+        <a class="nav-link" href="#contact" tabindex="-1">Contact</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- HERO -->
+      <section id="vanta-hero" aria-label="Introduction">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <div>
+            <div class="hero-eyebrow" id="heroEyebrow" role="status">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Open to internships &amp; ML collaborations
+            </div>
+            <h1 class="hero-title" id="heroName">
+              Building <span class="grad-text">Intelligent</span><br />Systems
+              with AI
+            </h1>
+            <p
+              class="hero-role"
+              id="heroRole"
+              aria-label="M.Sc AI and ML, Coimbatore Institute of Technology, CGPA 9.0"
+            >
+              // M.Sc AI &amp; ML &nbsp;&middot;&nbsp; Coimbatore Institute of
+              Technology &nbsp;&middot;&nbsp; CGPA 9.0
+            </p>
+            <p class="hero-desc" id="heroDesc">
+              First-year graduate student passionate about machine learning,
+              data science, and deploying real-world AI solutions. I build tools
+              that matter.
+            </p>
+            <div class="hero-actions" id="heroBtns">
+              <a class="btn-primary" href="#projects">View Projects &#x2193;</a>
+              <a
+                class="btn-ghost"
+                href="https://github.com/hayk015"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile (opens in new tab)"
+                >GitHub &#x2197;</a
+              >
+              <a
+                class="btn-ghost"
+                href="https://linkedin.com/in/hayakreev-raja-a54508395"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile (opens in new tab)"
+                >LinkedIn &#x2197;</a
+              >
+            </div>
+          </div>
+          <div class="hero-stats" id="heroCards" aria-label="Key statistics">
+            <div class="stat-card">
+              <div
+                class="stat-icon"
+                style="background: rgba(109, 213, 250, 0.15)"
+                aria-hidden="true"
+              >
+                &#x1F393;
+              </div>
+              <div>
+                <div class="stat-number">
+                  <span
+                    class="stat-num"
+                    data-target="9.0"
+                    data-dec="1"
+                    aria-label="9.0 CGPA"
+                    >0</span
+                  >
+                </div>
+                <div class="stat-label">Current CGPA</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div
+                class="stat-icon"
+                style="background: rgba(10, 122, 94, 0.15)"
+                aria-hidden="true"
+              >
+                &#x1F3C6;
+              </div>
+              <div>
+                <div class="stat-number">
+                  <span
+                    class="stat-num"
+                    data-target="2"
+                    data-suffix=" Awards"
+                    aria-label="2 Awards"
+                    >0</span
+                  >
+                </div>
+                <div class="stat-label">Inter-college competitions</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div
+                class="stat-icon"
+                style="background: rgba(255, 200, 80, 0.15)"
+                aria-hidden="true"
+              >
+                &#x1F4DC;
+              </div>
+              <div>
+                <div class="stat-number">
+                  <span
+                    class="stat-num"
+                    data-target="5"
+                    data-suffix=" Certs"
+                    aria-label="5 Certifications"
+                    >0</span
+                  >
+                </div>
+                <div class="stat-label">
+                  IBM SkillsBuild &middot; NPTEL Elite
+                </div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div
+                class="stat-icon"
+                style="background: rgba(26, 86, 204, 0.18)"
+                aria-hidden="true"
+              >
+                &#x1F680;
+              </div>
+              <div>
+                <div class="stat-number">
+                  <span
+                    class="stat-num"
+                    data-target="2"
+                    data-suffix="+ Projects"
+                    aria-label="2 or more Projects"
+                    >0</span
+                  >
+                </div>
+                <div class="stat-label">Deployed &amp; in progress</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="wave-divider" aria-hidden="true">
+        <svg
+          viewBox="0 0 1440 64"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          height="64"
+        >
+          <path
+            d="M0,32 C240,64 480,0 720,32 C960,64 1200,0 1440,32 L1440,64 L0,64 Z"
+            fill="var(--c-bg)"
+          />
+          <path
+            d="M0,48 C360,16 1080,64 1440,32 L1440,64 L0,64 Z"
+            fill="var(--c-bg)"
+            opacity="0.5"
+          />
+        </svg>
+      </div>
+
+      <!-- ABOUT -->
+      <section class="section" id="about" aria-labelledby="about-hd">
+        <div class="container">
+          <div class="rv-up">
+            <div class="section-tag" aria-hidden="true">01 / About</div>
+            <div class="section-header">
+              <h2 class="section-heading" id="about-hd">Who I am</h2>
+              <div class="section-rule" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="about-layout">
+            <div class="about-body rv-left">
+              <p>
+                I'm a first-year M.Sc student in Artificial Intelligence and
+                Machine Learning at Coimbatore Institute of Technology,
+                maintaining a CGPA of 9.0. My work spans Python-based data
+                analysis, statistical quality control, and responsive UI/UX
+                design &mdash; with a live deployed app already in my portfolio.
+              </p>
+              <blockquote class="about-pull">
+                "Passionate about bridging the gap between cutting-edge ML
+                research and real-world applications &mdash; from statistical
+                process control to intelligent data-driven systems."
+              </blockquote>
+              <p>
+                When I'm not training models, I'm designing web experiences and
+                building open-source data tools. I believe the best AI solutions
+                are both technically rigorous and genuinely useful.
+              </p>
+            </div>
+            <div class="kpi-grid rv-right">
+              <article
+                class="kpi-card gl-mi"
+                data-tilt
+                data-tilt-max="8"
+                data-tilt-speed="400"
+                data-tilt-glare
+                data-tilt-max-glare="0.10"
+              >
+                <span class="kpi-icon" aria-hidden="true">&#x1F393;</span>
+                <div class="kpi-label">Degree</div>
+                <div class="kpi-value">M.Sc AI &amp; ML</div>
+                <div class="kpi-sub">CIT Coimbatore</div>
+              </article>
+              <article
+                class="kpi-card gl-mi"
+                data-tilt
+                data-tilt-max="8"
+                data-tilt-speed="400"
+                data-tilt-glare
+                data-tilt-max-glare="0.10"
+              >
+                <span class="kpi-icon" aria-hidden="true">&#x1F4C8;</span>
+                <div class="kpi-label">CGPA</div>
+                <div class="kpi-value">9.0 / 10</div>
+                <div class="kpi-sub">First year</div>
+              </article>
+              <article
+                class="kpi-card gl-mi"
+                data-tilt
+                data-tilt-max="8"
+                data-tilt-speed="400"
+                data-tilt-glare
+                data-tilt-max-glare="0.10"
+              >
+                <span class="kpi-icon" aria-hidden="true">&#x1F4CD;</span>
+                <div class="kpi-label">Location</div>
+                <div class="kpi-value">Coimbatore</div>
+                <div class="kpi-sub">Tamil Nadu, India</div>
+              </article>
+              <article
+                class="kpi-card gl-mi"
+                data-tilt
+                data-tilt-max="8"
+                data-tilt-speed="400"
+                data-tilt-glare
+                data-tilt-max-glare="0.10"
+              >
+                <span class="kpi-icon" aria-hidden="true">&#x1F916;</span>
+                <div class="kpi-label">Focus</div>
+                <div class="kpi-value">Machine Learning</div>
+                <div class="kpi-sub">Data Science &amp; AI</div>
+              </article>
+              <div class="avail-badge">
+                <span class="avail-dot" aria-hidden="true"></span>
+                <div>
+                  <div class="avail-text">Open to opportunities</div>
+                  <div class="avail-sub">
+                    Internships &middot; Research &middot; ML collaborations
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section
+        class="section section--alt"
+        id="projects"
+        aria-labelledby="proj-hd"
+      >
+        <div class="container">
+          <div class="rv-up">
+            <div class="section-tag" aria-hidden="true">02 / Projects</div>
+            <div class="section-header">
+              <h2 class="section-heading" id="proj-hd">What I've built</h2>
+              <div class="section-rule" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="proj-grid">
+            <article
+              class="proj-card gl-mi rv-scale"
+              data-tilt
+              data-tilt-max="5"
+              data-tilt-speed="400"
+              data-tilt-glare
+              data-tilt-max-glare="0.07"
+            >
+              <div
+                class="proj-accent"
+                style="background: linear-gradient(90deg, #0a7a5e, #6dd5fa)"
+                aria-hidden="true"
+              ></div>
+              <div class="proj-body">
+                <div class="proj-meta">
+                  <span class="badge badge--live"
+                    ><span class="badge-dot" aria-hidden="true"></span
+                    >Live</span
+                  >
+                  <time class="proj-date" datetime="2026-01"
+                    >Jan 2026 &ndash; Mar 2026</time
+                  >
+                </div>
+                <h3 class="proj-title">SQC Analyzer &mdash; Fibre Industry</h3>
+                <p class="proj-desc">
+                  A Statistical Quality Control web app monitoring fibre
+                  production in real time. Implements control charts to detect
+                  process variations, with live data visualisation and
+                  API-integrated components. Fully deployed and publicly
+                  accessible.
+                </p>
+                <ul class="proj-tags" aria-label="Technologies">
+                  <li class="proj-tag">Python</li>
+                  <li class="proj-tag">Data Analysis</li>
+                  <li class="proj-tag">Control Charts</li>
+                  <li class="proj-tag">API Integration</li>
+                  <li class="proj-tag">Replit</li>
+                </ul>
+                <div class="proj-links">
+                  <a
+                    class="proj-link"
+                    href="https://attached-assets--nimaai2007.replit.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View SQC Analyzer live app (new tab)"
+                    >&#x1F517; Live App</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="proj-card gl-mi rv-scale"
+              data-tilt
+              data-tilt-max="5"
+              data-tilt-speed="400"
+              data-tilt-glare
+              data-tilt-max-glare="0.07"
+            >
+              <div
+                class="proj-accent"
+                style="background: linear-gradient(90deg, #1a56cc, #6dd5fa)"
+                aria-hidden="true"
+              ></div>
+              <div class="proj-body">
+                <div class="proj-meta">
+                  <span class="badge badge--ui">UI / UX</span>
+                  <time class="proj-date" datetime="2025-09"
+                    >Sep 2025 &ndash; Nov 2025</time
+                  >
+                </div>
+                <h3 class="proj-title">Multi-Page Web Platform</h3>
+                <p class="proj-desc">
+                  A multi-page web platform with Home, News, Fixtures, Rankings,
+                  Teams, Search, and Auth pages. Deep-blue palette, fully
+                  responsive across all breakpoints with custom dropdown
+                  navigation and dynamic content sections.
+                </p>
+                <ul class="proj-tags" aria-label="Technologies">
+                  <li class="proj-tag">HTML / CSS</li>
+                  <li class="proj-tag">JavaScript</li>
+                  <li class="proj-tag">Figma</li>
+                  <li class="proj-tag">Responsive Design</li>
+                </ul>
+                <div class="proj-links">
+                  <a
+                    class="proj-link"
+                    href="https://github.com/hayk015/Cricket-website-UI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View source on GitHub (new tab)"
+                    >&#x2B50; GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="proj-card gl-mi rv-scale"
+              data-tilt
+              data-tilt-max="5"
+              data-tilt-speed="400"
+              data-tilt-glare
+              data-tilt-max-glare="0.07"
+            >
+              <div
+                class="proj-accent"
+                style="background: linear-gradient(90deg, #2d6de8, #a8d4ff)"
+                aria-hidden="true"
+              ></div>
+              <div class="proj-body">
+                <div class="proj-meta">
+                  <span class="badge badge--live"
+                    ><span class="badge-dot" aria-hidden="true"></span
+                    >Live</span
+                  >
+                  <time class="proj-date" datetime="2025">2025</time>
+                </div>
+                <h3 class="proj-title">SDC Website Prototype</h3>
+                <p class="proj-desc">
+                  A live website for the Student Developers Cell (SDC) at CIT,
+                  built as a team project. Contributed the About and Events
+                  pages using a dark, futuristic design system &mdash; pure HTML
+                  &amp; CSS, no frameworks.
+                </p>
+                <ul class="proj-tags" aria-label="Technologies">
+                  <li class="proj-tag">HTML</li>
+                  <li class="proj-tag">CSS</li>
+                  <li class="proj-tag">Web Design</li>
+                  <li class="proj-tag">Dark UI</li>
+                  <li class="proj-tag">Team Project</li>
+                </ul>
+                <div class="proj-links">
+                  <a
+                    class="proj-link"
+                    href="https://sdcprototype.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View SDC site live (new tab)"
+                    >&#x1F517; Live Site</a
+                  >
+                  <a
+                    class="proj-link"
+                    href="https://github.com/hayk015/sdc-prototype"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="SDC GitHub repo (new tab)"
+                    >&#x2B50; GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills" aria-labelledby="skills-hd">
+        <div class="container">
+          <div class="rv-up">
+            <div class="section-tag" aria-hidden="true">03 / Skills</div>
+            <div class="section-header">
+              <h2 class="section-heading" id="skills-hd">Technical skills</h2>
+              <div class="section-rule" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="skills-grid">
+            <div
+              class="skill-card gl-mi rv-up"
+              data-tilt
+              data-tilt-max="7"
+              data-tilt-speed="400"
+            >
+              <div class="skill-hd">
+                <div
+                  class="skill-ico"
+                  style="background: rgba(26, 86, 204, 0.1)"
+                  aria-hidden="true"
+                >
+                  &#x1F4BB;
+                </div>
+                <h3 class="skill-cat">Languages</h3>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #1a56cc"
+                  aria-hidden="true"
+                ></div>
+                Python<span class="skill-lv">Intermediate</span>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #1a56cc"
+                  aria-hidden="true"
+                ></div>
+                R<span class="skill-lv">Intermediate</span>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #8a9ab8"
+                  aria-hidden="true"
+                ></div>
+                C<span class="skill-lv">Familiar</span>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #8a9ab8"
+                  aria-hidden="true"
+                ></div>
+                SQL<span class="skill-lv">Beginner</span>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #f97316"
+                  aria-hidden="true"
+                ></div>
+                HTML / CSS<span class="skill-lv">Intermediate</span>
+              </div>
+            </div>
+            <div
+              class="skill-card gl-mi rv-up"
+              data-tilt
+              data-tilt-max="7"
+              data-tilt-speed="400"
+            >
+              <div class="skill-hd">
+                <div
+                  class="skill-ico"
+                  style="background: rgba(10, 122, 94, 0.1)"
+                  aria-hidden="true"
+                >
+                  &#x1F916;
+                </div>
+                <h3 class="skill-cat">ML &amp; Data</h3>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #0a7a5e"
+                  aria-hidden="true"
+                ></div>
+                pandas
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #0a7a5e"
+                  aria-hidden="true"
+                ></div>
+                NumPy
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #8a9ab8"
+                  aria-hidden="true"
+                ></div>
+                Jupyter &amp; Spyder
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #8a9ab8"
+                  aria-hidden="true"
+                ></div>
+                Google Colab
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #f97316"
+                  aria-hidden="true"
+                ></div>
+                RStudio
+              </div>
+            </div>
+            <div
+              class="skill-card gl-mi rv-up"
+              data-tilt
+              data-tilt-max="7"
+              data-tilt-speed="400"
+            >
+              <div class="skill-hd">
+                <div
+                  class="skill-ico"
+                  style="background: rgba(249, 115, 22, 0.1)"
+                  aria-hidden="true"
+                >
+                  &#x1F3A8;
+                </div>
+                <h3 class="skill-cat">Design</h3>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #ea580c"
+                  aria-hidden="true"
+                ></div>
+                Figma
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #ea580c"
+                  aria-hidden="true"
+                ></div>
+                UI/UX Design
+              </div>
+            </div>
+            <div
+              class="skill-card gl-mi rv-up"
+              data-tilt
+              data-tilt-max="7"
+              data-tilt-speed="400"
+            >
+              <div class="skill-hd">
+                <div
+                  class="skill-ico"
+                  style="background: rgba(196, 154, 0, 0.1)"
+                  aria-hidden="true"
+                >
+                  &#x1F6E0;&#xFE0F;
+                </div>
+                <h3 class="skill-cat">Dev Tools</h3>
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #2d3748"
+                  aria-hidden="true"
+                ></div>
+                GitHub
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #0078d4"
+                  aria-hidden="true"
+                ></div>
+                VS Code
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #21d789"
+                  aria-hidden="true"
+                ></div>
+                PyCharm
+              </div>
+              <div class="skill-row">
+                <div
+                  class="skill-dot"
+                  style="background: #f26207"
+                  aria-hidden="true"
+                ></div>
+                Replit
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section
+        class="section section--alt"
+        id="certifications"
+        aria-labelledby="certs-hd"
+      >
+        <div class="container">
+          <div class="rv-up">
+            <div class="section-tag" aria-hidden="true">
+              04 / Certifications
+            </div>
+            <div class="section-header">
+              <h2 class="section-heading" id="certs-hd">Credentials</h2>
+              <div class="section-rule" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="certs-grid">
+            <article
+              class="cert-card gl-mi rv-scale"
+              data-tilt
+              data-tilt-max="5"
+              data-tilt-speed="400"
+            >
+              <div class="cert-body">
+                <div class="cert-logo cert-logo--ibm">IBM</div>
+                <div>
+                  <div class="cert-issuer">IBM SkillsBuild</div>
+                  <h3 class="cert-name">
+                    Artificial Intelligence Fundamentals
+                  </h3>
+                  <time class="cert-date" datetime="2026-01-24"
+                    >Jan 24, 2026</time
+                  >
+                </div>
+              </div>
+              <div class="cert-foot">
+                <a
+                  class="cert-lnk"
+                  href="https://www.credly.com/badges/69a96b55-9ee5-4b5a-a437-7433109b2986"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Verify AI Fundamentals on Credly (new tab)"
+                  >Verify on Credly &#x2197;</a
+                >
+              </div>
+            </article>
+            <article
+              class="cert-card gl-mi rv-scale"
+              data-tilt
+              data-tilt-max="5"
+              data-tilt-speed="400"
+            >
+              <div class="cert-body">
+                <div class="cert-logo cert-logo--ibm">IBM</div>
+                <div>
+                  <div class="cert-issuer">IBM SkillsBuild</div>
+                  <h3 class="cert-name">
+                    Getting Started with Artificial Intelligence
+                  </h3>
+                  <time class="cert-date" datetime="2026-01-25"
+                    >Jan 25, 2026</time
+                  >
+                </div>
+              </div>
+              <div class="cert-foot">
+                <a
+                  class="cert-lnk"
+                  href="https://www.credly.com/badges/3bf5cb6c-a135-4219-8d81-fc0b98d687bd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Verify Getting Started with AI on Credly (new tab)"
+                  >Verify on Credly &#x2197;</a
+                >
+              </div>
+            </article>
+            <article
+              class="cert-card gl-mi rv-scale"
+              data-tilt
+              data-tilt-max="5"
+              data-tilt-speed="400"
+            >
+              <div class="cert-body">
+                <div class="cert-logo cert-logo--ibm">IBM</div>
+                <div>
+                  <div class="cert-issuer">IBM SkillsBuild</div>
+                  <h3 class="cert-name">AI Literacy</h3>
+                  <time class="cert-date" datetime="2026-02-01"
+                    >Feb 1, 2026</time
+                  >
+                </div>
+              </div>
+              <div class="cert-foot">
+                <a
+                  class="cert-lnk"
+                  href="https://www.credly.com/go/SZhRx6cC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Verify AI Literacy on Credly (new tab)"
+                  >Verify on Credly &#x2197;</a
+                >
+              </div>
+            </article>
+            <article
+              class="cert-card gl-mi rv-scale cert-full"
+              data-tilt
+              data-tilt-max="3"
+              data-tilt-speed="400"
+            >
+              <div class="cert-body">
+                <div
+                  class="cert-logo cert-logo--ibm"
+                  style="font-size: 7px; letter-spacing: 0"
+                >
+                  NPTEL ELITE
+                </div>
+                <div>
+                  <div class="cert-issuer">
+                    IIT Kanpur &middot; Jan&ndash;Apr 2026 &middot; Score: 67%
+                  </div>
+                  <h3 class="cert-name">
+                    Exploratory Data Analysis for Data Science with R Software
+                  </h3>
+                  <time class="cert-date" datetime="2026-04"
+                    >Jan&ndash;Apr 2026</time
+                  >
+                </div>
+              </div>
+              <div class="cert-foot">
+                <a
+                  class="cert-lnk"
+                  href="https://drive.google.com/file/d/1nedCwR-htSXOT5dK2lPTZacIQDbfLj9P/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Verify NPTEL certificate on Google Drive (new tab)"
+                  >Verify on Drive &#x2197;</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- AWARDS -->
+      <section class="section" id="awards" aria-labelledby="awards-hd">
+        <div class="container">
+          <div class="rv-up">
+            <div class="section-tag" aria-hidden="true">05 / Awards</div>
+            <div class="section-header">
+              <h2 class="section-heading" id="awards-hd">
+                Honours &amp; Recognition
+              </h2>
+              <div class="section-rule" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="awards-grid">
+            <article
+              class="award-card gl-mi rv-left"
+              data-tilt
+              data-tilt-max="6"
+              data-tilt-speed="400"
+            >
+              <div class="award-medal medal--silver" aria-hidden="true">
+                &#x1F948;
+              </div>
+              <div>
+                <span class="award-rank rank--silver">2nd Prize</span>
+                <h3 class="award-title">Paper Presentation</h3>
+                <p class="award-desc">
+                  SNS College of Technology, Coimbatore &mdash; Research on
+                  Statistical Process Control (SPC) &middot; March 2026
+                </p>
+                <div style="margin-top: var(--sp-4)">
+                  <a
+                    class="cert-lnk"
+                    href="https://drive.google.com/file/d/1GNfyApYEPhgy5nMhjMsPZ1DBG1D3O-qy/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Verify award certificate on Drive (new tab)"
+                    >Verify on Drive &#x2197;</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="award-card gl-mi rv-right"
+              data-tilt
+              data-tilt-max="6"
+              data-tilt-speed="400"
+            >
+              <div class="award-medal medal--gold" aria-hidden="true">
+                &#x1F949;
+              </div>
+              <div>
+                <span class="award-rank rank--gold">3rd Prize</span>
+                <h3 class="award-title">InnovatX 2026</h3>
+                <p class="award-desc">
+                  Coimbatore Institute of Technology &mdash; SQC Analyzer, fibre
+                  industry quality control &middot; April 2026
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        class="section section--alt"
+        id="contact"
+        aria-labelledby="contact-hd"
+      >
+        <div class="container">
+          <div class="rv-up">
+            <div class="section-tag" aria-hidden="true">06 / Contact</div>
+            <div class="section-header">
+              <h2 class="section-heading" id="contact-hd">Get in touch</h2>
+              <div class="section-rule" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-card gl-mi rv-left">
+              <h3 class="contact-hd">Let's build something great together</h3>
+              <p class="contact-sub">
+                Open to internships, research, and ML projects. Reach out
+                through any channel below.
+              </p>
+              <a
+                class="clink-row"
+                href="mailto:hayakreevr.2007@gmail.com"
+                aria-label="Email: hayakreevr.2007@gmail.com"
+              >
+                <div class="clink-ico" aria-hidden="true">&#x1F4E7;</div>
+                <div>
+                  <div class="clink-label">Email</div>
+                  <div class="clink-val">hayakreevr.2007@gmail.com</div>
+                </div>
+              </a>
+              <a
+                class="clink-row"
+                href="https://linkedin.com/in/hayakreev-raja-a54508395"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile (new tab)"
+              >
+                <div class="clink-ico" aria-hidden="true">&#x1F4BC;</div>
+                <div>
+                  <div class="clink-label">LinkedIn</div>
+                  <div class="clink-val">hayakreev-raja-a54508395</div>
+                </div>
+              </a>
+              <a
+                class="clink-row"
+                href="https://github.com/hayk015"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile (new tab)"
+              >
+                <div class="clink-ico" aria-hidden="true">&#x1F419;</div>
+                <div>
+                  <div class="clink-label">GitHub</div>
+                  <div class="clink-val">github.com/hayk015</div>
+                </div>
+              </a>
+            </div>
+            <div class="cta-card rv-right">
+              <div class="cta-cnt">
+                <p class="cta-hd">Currently open to opportunities &#x1F680;</p>
+                <p class="cta-desc">
+                  First-year M.Sc AI &amp; ML student with a deployed app,
+                  inter-college awards, and ML projects in progress. The best
+                  work is still ahead &mdash; let's collaborate.
+                </p>
+              </div>
+              <a
+                class="cta-btn"
+                href="mailto:hayakreevr.2007@gmail.com"
+                aria-label="Send an email to Hayakreev"
+                >Send me an email &#x2192;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <span class="foot-brand">Hayakreev <span>Raja</span></span>
+      <nav class="foot-links" aria-label="Footer links">
+        <a
+          href="https://github.com/hayk015"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub (new tab)"
+          >GitHub</a
+        >
+        <a
+          href="https://linkedin.com/in/hayakreev-raja-a54508395"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn (new tab)"
+          >LinkedIn</a
+        >
+        <a href="mailto:hayakreevr.2007@gmail.com">Email</a>
+      </nav>
+      <span class="foot-copy">&copy; 2026 &middot; Hayakreev Raja</span>
+    </footer>
+    <script src="port.js"></script>
+  </body>
+</html>
