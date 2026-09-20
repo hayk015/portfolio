@@ -1045,11 +1045,20 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--c-brand);
   border: 1px solid var(--c-brand-bdr);
 }
+.badge--winner {
+  background: var(--amber-bg);
+  color: var(--amber);
+  border: 1px solid rgba(180, 83, 9, 0.30);
+}
 .badge-dot {
   width: 5px; height: 5px;
   border-radius: 50%;
   background: var(--c-acc);
   animation: pulse-dot 2.5s infinite;
+}
+.badge-dot--gold {
+  background: #d97706;
+  box-shadow: 0 0 6px rgba(217, 119, 6, 0.4);
 }
 .proj-date {
   font-family: var(--font-mono);
@@ -1124,11 +1133,14 @@ img { max-width: 100%; height: auto; display: block; }
 /* ── SKILLS ── */
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--sp-4);
 }
-@media (min-width: 900px) {
-  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+@media (min-width: 600px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .skills-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .skill-card {
@@ -1226,6 +1238,18 @@ img { max-width: 100%; height: auto; display: block; }
 .cert-logo--ibm {
   background: linear-gradient(135deg, #0530AD, #1D4ED8);
 }
+.cert-logo--stanford {
+  background: linear-gradient(135deg, #8C1515, #B83A4B);
+  font-size: 7px;
+  line-height: 1.15;
+  text-align: center;
+}
+.cert-logo--nptel {
+  background: linear-gradient(135deg, #B45309, #D97706);
+  font-size: 7px;
+  line-height: 1.15;
+  text-align: center;
+}
 .cert-issuer {
   font-family: var(--font-mono);
   font-size: var(--fs-2xs);
@@ -1273,7 +1297,10 @@ img { max-width: 100%; height: auto; display: block; }
   gap: var(--sp-5);
 }
 @media (min-width: 640px) {
-  .awards-grid { grid-template-columns: 1fr 1fr; }
+  .awards-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 900px) {
+  .awards-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .award-card {
@@ -1304,13 +1331,18 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 1.6rem;
   flex-shrink: 0;
 }
-.medal--silver {
-  background: rgba(100,116,139,0.08);
-  border: 1px solid rgba(100,116,139,0.20);
+.medal--1st, .medal--gold {
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.15);
 }
-.medal--gold {
-  background: rgba(180,83,9,0.08);
-  border: 1px solid rgba(180,83,9,0.20);
+.medal--2nd, .medal--silver {
+  background: rgba(100, 116, 139, 0.10);
+  border: 1px solid rgba(100, 116, 139, 0.25);
+}
+.medal--3rd, .medal--bronze {
+  background: rgba(180, 83, 9, 0.10);
+  border: 1px solid rgba(180, 83, 9, 0.22);
 }
 .award-rank {
   display: inline-flex;
@@ -1324,15 +1356,20 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.rank--silver {
-  background: rgba(100,116,139,0.08);
-  color: var(--c-silver);
-  border: 1px solid rgba(100,116,139,0.20);
+.rank--1st, .rank--gold {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.35);
 }
-.rank--gold {
-  background: rgba(180,83,9,0.08);
+.rank--2nd, .rank--silver {
+  background: rgba(100, 116, 139, 0.10);
+  color: var(--c-silver);
+  border: 1px solid rgba(100, 116, 139, 0.25);
+}
+.rank--3rd, .rank--bronze {
+  background: rgba(180, 83, 9, 0.10);
   color: var(--c-warn);
-  border: 1px solid rgba(180,83,9,0.20);
+  border: 1px solid rgba(180, 83, 9, 0.22);
 }
 .award-title {
   font-family: var(--font-display);
